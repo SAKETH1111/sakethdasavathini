@@ -22,45 +22,66 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <a
-              href="mailto:saketh@example.com"
-              className="group p-8 rounded-2xl bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 animate-fade-in hover:scale-105"
+              href="mailto:saketh1111@gmail.com"
+              className="group p-6 rounded-2xl bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 animate-fade-in hover:scale-105"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-2">
                 <div className="p-3 rounded-xl bg-gradient-hero shadow-elegant group-hover:animate-glow">
                   <Mail className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-semibold text-foreground">Email Me</h3>
-                  <p className="text-muted-foreground">Quick response guaranteed</p>
+                  <h3 className="text-lg font-semibold text-foreground">Email</h3>
+                  <p className="text-muted-foreground">Direct contact</p>
                 </div>
               </div>
+              <p className="text-primary font-medium">saketh1111@gmail.com</p>
             </a>
 
             <a
-              href="https://linkedin.com/in/saketh-dasavathini"
-              className="group p-8 rounded-2xl bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 animate-fade-in hover:scale-105"
+              href="https://linkedin.com/in/dsaketh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 rounded-2xl bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 animate-fade-in hover:scale-105"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-2">
                 <div className="p-3 rounded-xl bg-gradient-hero shadow-elegant group-hover:animate-glow">
                   <Linkedin className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold text-foreground">LinkedIn</h3>
-                  <p className="text-muted-foreground">Professional networking</p>
+                  <p className="text-muted-foreground">Professional network</p>
                 </div>
               </div>
+              <p className="text-primary font-medium">Connect with me</p>
             </a>
+
+            <div className="group p-6 rounded-2xl bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 animate-fade-in">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="p-3 rounded-xl bg-gradient-hero shadow-elegant">
+                  <span className="text-primary-foreground font-bold">📍</span>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold text-foreground">Location</h3>
+                  <p className="text-muted-foreground">Based in Texas</p>
+                </div>
+              </div>
+              <p className="text-primary font-medium">Frisco, Texas</p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="group">
-              Start a Conversation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <Button asChild variant="hero" size="lg" className="group">
+              <a href="mailto:saketh1111@gmail.com" rel="noopener noreferrer">
+                Start a Conversation
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary/20 hover:border-primary/40">
-              View GitHub Profile
+            <Button asChild variant="outline" size="lg" className="border-primary/20 hover:border-primary/40">
+              <a href="https://github.com/SAKETH1111" target="_blank" rel="noopener noreferrer">
+                View GitHub Profile
+              </a>
             </Button>
           </div>
         </div>

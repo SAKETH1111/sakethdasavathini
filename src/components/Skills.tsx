@@ -4,26 +4,26 @@ const skillCategories = [
   {
     icon: Code2,
     title: "Frontend Technologies",
-    skills: ["React", "TypeScript", "Next.js", "Vue.js", "Angular", "JavaScript ES6+"],
+    skills: ["React", "TypeScript", "JavaScript (ES6+)", "Next.js", "HTML5", "CSS3", "Marko.js"],
     color: "text-blue-500"
   },
   {
+    icon: Zap,
+    title: "Backend & Cloud",
+    skills: ["Node.js", "Java", "Spring Boot", "AWS", "GraphQL", "REST APIs", "Microservices"],
+    color: "text-green-500"
+  },
+  {
     icon: Palette,
-    title: "Styling & Design",
-    skills: ["Tailwind CSS", "Styled Components", "SASS/SCSS", "CSS3", "Material-UI", "Chakra UI"],
+    title: "UI/UX & Styling",
+    skills: ["Tailwind CSS", "Material-UI v5", "Bootstrap", "CSS3", "Responsive Design", "WCAG"],
     color: "text-purple-500"
   },
   {
-    icon: Zap,
-    title: "Build Tools & Performance",
-    skills: ["Webpack", "Vite", "Rollup", "ESLint", "Prettier", "Bundle Optimization"],
-    color: "text-yellow-500"
-  },
-  {
     icon: Smartphone,
-    title: "Cross-Platform",
-    skills: ["Responsive Design", "Progressive Web Apps", "Mobile-First", "Accessibility (a11y)"],
-    color: "text-green-500"
+    title: "DevOps & Testing",
+    skills: ["Docker", "Kubernetes", "Jenkins CI/CD", "Jest", "React Testing Library", "Playwright"],
+    color: "text-orange-500"
   }
 ];
 

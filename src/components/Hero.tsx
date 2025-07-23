@@ -20,12 +20,27 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
-              Senior Frontend Engineer at eBay
+              Senior Full Stack Engineer at eBay
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Crafting exceptional user experiences with modern web technologies. 
-              Passionate about creating scalable, performant, and beautiful frontend solutions.
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
+              <span className="text-primary font-semibold">7+ years</span> of innovative full-stack development experience. 
+              Expert in React, TypeScript, Node.js, AWS & Java. Building scalable solutions impacting 
+              <span className="text-primary font-semibold"> millions of users</span> at world-class tech companies.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8">
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                AWS Certified Solutions Architect
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                AWS QuickSight Hackathon Winner 2023
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                Frisco, Texas
+              </span>
+            </div>
           </div>
 
           {/* CTA Buttons */}
@@ -42,21 +57,26 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 animate-fade-in delay-500">
             <a 
-              href="#" 
+              href="https://linkedin.com/in/dsaketh/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary/10 shadow-card hover:shadow-hover transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6 text-primary" />
             </a>
             <a 
-              href="#" 
+              href="https://github.com/SAKETH1111" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary/10 shadow-card hover:shadow-hover transition-all duration-300 hover:scale-110"
               aria-label="GitHub"
             >
               <Github className="h-6 w-6 text-primary" />
             </a>
             <a 
-              href="#" 
+              href="mailto:saketh1111@gmail.com" 
+              rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary/10 shadow-card hover:shadow-hover transition-all duration-300 hover:scale-110"
               aria-label="Email"
             >

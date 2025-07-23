@@ -2,28 +2,40 @@ import { Building2, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    company: "eBay",
-    role: "Senior Frontend Engineer",
-    period: "Current",
-    description: "Leading frontend development initiatives and architecting scalable web solutions for millions of users.",
+    company: "eBay Inc",
+    role: "Senior Full Stack Engineer",
+    period: "Mar 2024 - Present",
+    description: "Spearheading end-to-end development of scalable advertising solutions within eBay Ads ecosystem. Building modern React components with TypeScript, Marko.js, and Node.js. Optimized SPA performance by ~35% through lazy loading and code splitting.",
     logo: "🏢",
-    current: true
+    current: true,
+    highlights: ["eBay Ads Ecosystem", "35% Performance Optimization", "React/TypeScript/Node.js"]
   },
   {
-    company: "Amazon",
-    role: "Frontend Engineer",
-    period: "Previous",
-    description: "Developed and maintained high-performance web applications serving global customers.",
+    company: "Amazon AWS",
+    role: "Software Development Engineer",
+    period: "Jan 2023 - Feb 2024",
+    description: "Full-stack developer for AWS QuickSight, building data analytics applications impacting 1M+ users worldwide. Specialized in React, TypeScript, Java, GraphQL APIs, and advanced JavaScript optimization techniques.",
     logo: "📦",
-    current: false
+    current: false,
+    highlights: ["AWS QuickSight", "1M+ Users Impact", "GraphQL Integration"]
+  },
+  {
+    company: "Amazon AWS",
+    role: "Software Development Engineer Intern",
+    period: "Jun 2022 - Aug 2022",
+    description: "Enhanced QuickSight visualization capabilities and developed innovative date range filtering features. Gained expertise in progressive web applications and React optimization.",
+    logo: "📦",
+    current: false,
+    highlights: ["Data Visualization", "React Optimization", "PWA Development"]
   },
   {
     company: "Accenture",
-    role: "Frontend Developer",
-    period: "Previous",
-    description: "Built responsive web applications and collaborated with cross-functional teams on enterprise solutions.",
+    role: "Application Developer Associate",
+    period: "Oct 2019 - Jul 2021",
+    description: "Developed microservices using Spring Boot, implemented secure RESTful APIs with OAuth 2.0/JWT. Built automated client receipt generation impacting 500K+ customers. Containerized applications with Docker/Kubernetes.",
     logo: "💼",
-    current: false
+    current: false,
+    highlights: ["Microservices Architecture", "500K+ Customer Impact", "Docker/Kubernetes"]
   }
 ];
 
@@ -78,9 +90,18 @@ const Experience = () => {
                       <span>{exp.period}</span>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     {exp.description}
                   </p>
+                  {exp.highlights && (
+                    <div className="flex flex-wrap gap-2">
+                      {exp.highlights.map((highlight, idx) => (
+                        <span key={idx} className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
