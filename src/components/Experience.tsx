@@ -13,7 +13,7 @@ const experiences = [
   {
     company: "Amazon AWS",
     role: "Software Development Engineer",
-    period: "Jan 2023 - Feb 2024",
+    period: "Jan 2023 - Feb 2025",
     description: "Full-stack developer for AWS QuickSight, building data analytics applications impacting 1M+ users worldwide. Specialized in React, TypeScript, Java, GraphQL APIs, and advanced JavaScript optimization techniques.",
     logo: "📦",
     current: false,
