@@ -4,7 +4,7 @@ const experiences = [
   {
     company: "eBay Inc",
     role: "Senior Full Stack Engineer",
-    period: "Mar 2024 - Present",
+    period: "Mar 2025 - Present",
     description: "Spearheading end-to-end development of scalable advertising solutions within eBay Ads ecosystem. Building modern React components with TypeScript, Marko.js, and Node.js. Optimized SPA performance by ~35% through lazy loading and code splitting.",
     logo: "🏢",
     current: true,
