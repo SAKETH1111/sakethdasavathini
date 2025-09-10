@@ -2,70 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Frontend Engineer Design System */
+/* Creative Modern Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    /* Rainfall Color Palette - Light Sky Theme */
+    --background: 200 100% 95%;
+    --foreground: 200 50% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card: 200 30% 98%;
+    --card-foreground: 200 50% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 200 30% 98%;
+    --popover-foreground: 200 50% 20%;
 
-    --primary: 217 91% 60%;
+    --primary: 200 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 100% 70%;
 
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 200 20% 90%;
+    --secondary-foreground: 200 50% 20%;
 
-    --muted: 214 32% 91%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 200 15% 85%;
+    --muted-foreground: 200 30% 40%;
 
-    --accent: 217 91% 60%;
+    --accent: 200 100% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 100% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 200 20% 80%;
+    --input: 200 20% 90%;
+    --ring: 200 100% 50%;
 
-    /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(230 91% 65%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(214 32% 97%));
-    --gradient-accent: linear-gradient(90deg, hsl(217 91% 60%), hsl(217 100% 70%));
+    /* Rainfall Typography */
+    --font-rainfall: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-rainfall-text: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    /* Professional shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(217 91% 60% / 0.2);
-    --shadow-card: 0 4px 20px -4px hsl(215 25% 27% / 0.1);
-    --shadow-hover: 0 8px 30px -8px hsl(217 91% 60% / 0.3);
+    /* Rainfall Gradients */
+    --gradient-hero: linear-gradient(180deg, rgba(135,206,235,0.8) 0%, rgba(152,216,232,0.6) 50%, rgba(176,224,230,0.9) 100%);
+    --gradient-card: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+    --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    --gradient-sky: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    --gradient-light: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, rgba(135,206,235,0.3) 100%);
+    --gradient-text: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+    --gradient-button: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    --gradient-hover: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
 
-    /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Rainfall Shadows */
+    --shadow-soft: 0 2px 8px rgba(135, 206, 235, 0.2);
+    --shadow-medium: 0 4px 16px rgba(135, 206, 235, 0.3);
+    --shadow-strong: 0 8px 32px rgba(135, 206, 235, 0.4);
+    --shadow-card: 0 2px 8px rgba(135, 206, 235, 0.1);
+    --shadow-hover: 0 4px 16px rgba(14, 165, 233, 0.3);
+    --shadow-sky: 0 0 20px rgba(14, 165, 233, 0.4);
+    --shadow-rainfall: 0 4px 20px rgba(135, 206, 235, 0.3);
+
+    /* Creative Transitions */
+    --transition-apple: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-smooth: all 0.2s ease-out;
+    --transition-glow: all 0.3s ease-in-out;
+    --transition-cyber: all 0.2s ease-in-out;
 
-    --radius: 0.5rem;
+    --radius: 12px;
 
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 0 0% 9%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 9%;
   }
 
   .dark {
@@ -114,5 +124,785 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-rainfall-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(180deg, #87CEEB 0%, #98D8E8 50%, #B0E0E6 100%);
+    min-height: 100vh;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-rainfall);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #1e293b;
+  }
+}
+
+@layer components {
+  /* Rainfall Button Styles */
+  .btn-rainfall {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200;
+    @apply bg-sky-500 text-white hover:bg-sky-600 active:scale-95;
+    @apply shadow-md hover:shadow-lg;
+    @apply font-semibold;
+    @apply hover:shadow-sky-500/30;
+  }
+
+  .btn-rainfall-outline {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200;
+    @apply border border-sky-300 text-sky-700 hover:bg-sky-50 hover:text-sky-800 active:scale-95;
+    @apply shadow-md hover:shadow-lg;
+    @apply font-semibold;
+    @apply bg-white/80 backdrop-blur-sm;
+  }
+
+  .btn-rainfall-secondary {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200;
+    @apply bg-sky-100 text-sky-700 hover:bg-sky-200 active:scale-95;
+    @apply shadow-md hover:shadow-lg;
+    @apply font-semibold;
+  }
+
+  /* Rainfall Card Styles */
+  .card-rainfall {
+    @apply rounded-xl p-6 transition-all duration-300;
+    @apply bg-white/90 backdrop-blur-sm;
+    @apply border border-sky-200;
+    @apply shadow-lg hover:shadow-xl;
+    @apply hover:scale-105;
+    @apply hover:border-sky-300;
+    @apply hover:shadow-sky-500/20;
+  }
+
+  /* Rainfall Typography */
+  .text-rainfall-large {
+    @apply text-6xl md:text-8xl font-bold leading-tight tracking-tight;
+    font-family: var(--font-rainfall);
+    color: #1e293b;
+    text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.3);
+  }
+
+  .text-rainfall-headline {
+    @apply text-4xl md:text-6xl font-bold leading-tight tracking-tight;
+    font-family: var(--font-rainfall);
+    color: #1e293b;
+    text-shadow: 1px 1px 2px rgba(135, 206, 235, 0.2);
+  }
+
+  .text-rainfall-subheadline {
+    @apply text-2xl md:text-3xl font-semibold leading-tight tracking-tight;
+    font-family: var(--font-rainfall);
+    color: #334155;
+  }
+
+  .text-rainfall-body {
+    @apply text-lg md:text-xl leading-relaxed;
+    font-family: var(--font-rainfall-text);
+    color: #475569;
+  }
+
+  .text-rainfall-caption {
+    @apply text-sm text-sky-600;
+    font-family: var(--font-rainfall-text);
+  }
+
+  /* Apple Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-up-delay {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  /* Apple Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+
+  /* Enhanced Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite alternate;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.6s ease-out forwards;
+  }
+
+  .animate-stagger {
+    animation: stagger 0.6s ease-out forwards;
+  }
+
+  /* Parallax Effects */
+  .parallax-slow {
+    transform: translateY(var(--parallax-offset, 0));
+  }
+
+  .parallax-fast {
+    transform: translateY(calc(var(--parallax-offset, 0) * 0.5));
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.6), 0 0 30px rgba(0, 122, 255, 0.4);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes stagger {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.5);
+  }
+}
+
+/* Rainfall Animations */
+@keyframes rainfall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes rainfall-slow {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes rainfall-fast {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes droplet {
+  0% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-rainfall {
+  animation: rainfall 2s linear infinite;
+}
+
+.animate-rainfall-slow {
+  animation: rainfall-slow 3s linear infinite;
+}
+
+.animate-rainfall-fast {
+  animation: rainfall-fast 1.5s linear infinite;
+}
+
+.animate-droplet {
+  animation: droplet 1s ease-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+/* Weather-specific animations */
+@keyframes cherry-blossom-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sunshine {
+  0% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(20px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes leaf-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes lightning {
+  0%, 90%, 100% {
+    opacity: 0;
+  }
+  5%, 85% {
+    opacity: 1;
+  }
+}
+
+@keyframes gentle-drift {
+  0% {
+    transform: translateY(-20px) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px) translateX(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes sunrise-sunset {
+  0% {
+    transform: translateX(-100px) translateY(100px) scaleX(1.5) scaleY(0.8);
+    opacity: 0.3;
+    filter: hue-rotate(20deg) brightness(0.7);
+  }
+  10% {
+    transform: translateX(10vw) translateY(90px) scaleX(1.3) scaleY(0.9);
+    opacity: 0.8;
+    filter: hue-rotate(15deg) brightness(0.8);
+  }
+  20% {
+    transform: translateX(20vw) translateY(80px) scaleX(1.1) scaleY(0.95);
+    opacity: 1;
+    filter: hue-rotate(10deg) brightness(0.9);
+  }
+  40% {
+    transform: translateX(40vw) translateY(40px) scaleX(1) scaleY(1);
+    opacity: 1;
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  60% {
+    transform: translateX(60vw) translateY(20px) scaleX(1) scaleY(1);
+    opacity: 1;
+    filter: hue-rotate(0deg) brightness(1.1);
+  }
+  80% {
+    transform: translateX(80vw) translateY(40px) scaleX(1.1) scaleY(0.95);
+    opacity: 0.9;
+    filter: hue-rotate(-10deg) brightness(0.9);
+  }
+  90% {
+    transform: translateX(90vw) translateY(70px) scaleX(1.3) scaleY(0.9);
+    opacity: 0.6;
+    filter: hue-rotate(-15deg) brightness(0.7);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(100px) scaleX(1.5) scaleY(0.8);
+    opacity: 0.2;
+    filter: hue-rotate(-20deg) brightness(0.5);
+  }
+}
+
+.animate-cherry-blossom-fall {
+  animation: cherry-blossom-fall 4s linear infinite;
+}
+
+.animate-sunshine {
+  animation: sunshine 3s ease-in-out infinite;
+}
+
+.animate-leaf-fall {
+  animation: leaf-fall 5s linear infinite;
+}
+
+.animate-snowfall {
+  animation: snowfall 4s linear infinite;
+}
+
+.animate-lightning {
+  animation: lightning 0.1s ease-in-out infinite;
+}
+
+.animate-gentle-drift {
+  animation: gentle-drift 4s ease-in-out infinite;
+}
+
+.animate-sunrise-sunset {
+  animation: sunrise-sunset 7s ease-in-out infinite;
+}
+
+@keyframes sun-rays {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes sun-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.2);
+  }
+}
+
+.animate-sun-rays {
+  animation: sun-rays 3s linear infinite;
+}
+
+.animate-sun-glow {
+  animation: sun-glow 2s ease-in-out infinite;
+}
+
+@keyframes ray-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(1.0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes shadow-sweep {
+  0% {
+    opacity: 0.1;
+    transform: translateX(-20px) rotate(15deg);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateX(0px) rotate(10deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px) rotate(5deg);
+  }
+  75% {
+    opacity: 0.3;
+    transform: translateX(40px) rotate(0deg);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateX(60px) rotate(-5deg);
+  }
+}
+
+@keyframes light-beam {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(0%);
+  }
+  80% {
+    opacity: 0.3;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes corner-light {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes sun-lighting {
+  0% {
+    filter: brightness(0.8) contrast(1.1);
+  }
+  25% {
+    filter: brightness(1.0) contrast(1.2);
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.3);
+  }
+  75% {
+    filter: brightness(1.0) contrast(1.2);
+  }
+  100% {
+    filter: brightness(0.8) contrast(1.1);
+  }
+}
+
+.animate-ray-pulse {
+  animation: ray-pulse 2s ease-in-out infinite;
+}
+
+.animate-shadow-sweep {
+  animation: shadow-sweep 7s ease-in-out infinite;
+}
+
+.animate-light-beam {
+  animation: light-beam 7s ease-in-out infinite;
+}
+
+.animate-corner-light {
+  animation: corner-light 4s ease-in-out infinite;
+}
+
+.animate-sun-lighting {
+  animation: sun-lighting 7s ease-in-out infinite;
+}
+
+@keyframes name-shadow-realistic {
+  /* Morning - Sun in upper left, shadow starts bottom right */
+  0% {
+    transform: translateX(25px) translateY(12px) scaleX(1.3);
+    opacity: 0.5;
+  }
+  10% {
+    transform: translateX(20px) translateY(10px) scaleX(1.2);
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(15px) translateY(8px) scaleX(1.1);
+    opacity: 0.7;
+  }
+  
+  /* Mid-morning - Shadow moving left and getting shorter */
+  30% {
+    transform: translateX(10px) translateY(6px) scaleX(0.9);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateX(5px) translateY(4px) scaleX(0.7);
+    opacity: 0.9;
+  }
+  
+  /* Noon - Sun directly overhead, minimal shadow */
+  50% {
+    transform: translateX(0px) translateY(2px) scaleX(0.3);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translateX(-2px) translateY(1px) scaleX(0.2);
+    opacity: 0.3;
+  }
+  
+  /* Afternoon - Shadow growing to the left */
+  70% {
+    transform: translateX(-8px) translateY(4px) scaleX(0.6);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateX(-12px) translateY(6px) scaleX(0.8);
+    opacity: 0.8;
+  }
+  90% {
+    transform: translateX(-18px) translateY(8px) scaleX(1.0);
+    opacity: 0.7;
+  }
+  
+  /* Evening - Sun in upper right, long shadow to the left */
+  100% {
+    transform: translateX(-25px) translateY(12px) scaleX(1.3);
+    opacity: 0.5;
+  }
+}
+
+@keyframes name-highlight {
+  0% {
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3), 0 0 8px rgba(255, 165, 0, 0.2);
+    filter: brightness(1.1);
+  }
+  10% {
+    text-shadow: 3px 3px 6px rgba(255, 215, 0, 0.4), 0 0 12px rgba(255, 165, 0, 0.3);
+    filter: brightness(1.2);
+  }
+  20% {
+    text-shadow: 4px 4px 8px rgba(255, 215, 0, 0.5), 0 0 16px rgba(255, 165, 0, 0.4);
+    filter: brightness(1.3);
+  }
+  40% {
+    text-shadow: 6px 6px 12px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 165, 0, 0.5);
+    filter: brightness(1.4);
+  }
+  60% {
+    text-shadow: 8px 8px 16px rgba(255, 215, 0, 0.7), 0 0 24px rgba(255, 165, 0, 0.6);
+    filter: brightness(1.5);
+  }
+  80% {
+    text-shadow: 6px 6px 12px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 165, 0, 0.5);
+    filter: brightness(1.4);
+  }
+  90% {
+    text-shadow: 4px 4px 8px rgba(255, 215, 0, 0.5), 0 0 16px rgba(255, 165, 0, 0.4);
+    filter: brightness(1.3);
+  }
+  100% {
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3), 0 0 8px rgba(255, 165, 0, 0.2);
+    filter: brightness(1.1);
+  }
+}
+
+.animate-name-shadow {
+  animation: name-shadow 7s ease-in-out infinite;
+}
+
+.animate-name-shadow-realistic {
+  animation: name-shadow-realistic 7s ease-in-out infinite;
+}
+
+.animate-name-highlight {
+  animation: name-highlight 7s ease-in-out infinite;
 }

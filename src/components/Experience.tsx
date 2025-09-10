@@ -41,14 +41,14 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-background to-secondary/10">
+    <section className="py-20 bg-gradient-to-br from-yellow-50/80 to-orange-100/60 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-orange-800 mb-4">
               Professional Experience
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-orange-700 max-w-2xl mx-auto">
               Building exceptional user experiences at world-class technology companies
             </p>
           </div>
@@ -57,19 +57,19 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative flex flex-col md:flex-row items-start md:items-center gap-6 p-8 rounded-2xl bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 animate-fade-in ${
-                  exp.current ? 'ring-2 ring-primary/20 bg-primary/5' : ''
+                className={`relative flex flex-col md:flex-row items-start md:items-center gap-6 p-8 rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-500 animate-fade-in ${
+                  exp.current ? 'ring-2 ring-yellow-400/30 bg-yellow-50/50' : ''
                 }`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 {exp.current && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-hero text-primary-foreground px-4 py-1 rounded-full text-sm font-medium animate-glow">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium animate-glow">
                     Current
                   </div>
                 )}
                 
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center text-2xl shadow-elegant">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-2xl shadow-lg">
                     {exp.logo}
                   </div>
                 </div>
@@ -77,26 +77,26 @@ const Experience = () => {
                 <div className="flex-grow">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-semibold text-foreground mb-1">
+                      <h3 className="text-2xl font-semibold text-orange-800 mb-1">
                         {exp.role}
                       </h3>
-                      <div className="flex items-center gap-2 text-primary font-medium">
+                      <div className="flex items-center gap-2 text-orange-600 font-medium">
                         <Building2 className="h-4 w-4" />
                         <span>{exp.company}</span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-muted-foreground mt-2 md:mt-0">
+                    <div className="flex items-center gap-2 text-orange-600 mt-2 md:mt-0">
                       <Calendar className="h-4 w-4" />
                       <span>{exp.period}</span>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-orange-700 leading-relaxed mb-4">
                     {exp.description}
                   </p>
                   {exp.highlights && (
                     <div className="flex flex-wrap gap-2">
                       {exp.highlights.map((highlight, idx) => (
-                        <span key={idx} className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                        <span key={idx} className="inline-block px-3 py-1 bg-yellow-100 text-orange-700 text-sm rounded-full">
                           {highlight}
                         </span>
                       ))}
