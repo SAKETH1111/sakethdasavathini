@@ -1,22 +1,12 @@
-# Welcome to your Lovable project
+# Saketh Dasavathini - Frontend Developer Portfolio
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/711bf673-f8ce-4cb6-8351-45ffc79b8797
+This is a personal portfolio website showcasing my frontend development skills and projects.
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/711bf673-f8ce-4cb6-8351-45ffc79b8797) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your preferred IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +52,15 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/711bf673-f8ce-4cb6-8351-45ffc79b8797) and click on Share -> Publish.
+You can deploy this project using GitHub Pages or any other static hosting service.
 
-## Can I connect a custom domain to my Lovable project?
+For GitHub Pages deployment, run:
+```sh
+npm run deploy
+```
+
+## Can I connect a custom domain to this project?
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To connect a domain, you'll need to configure your hosting service to point to your deployed application.
